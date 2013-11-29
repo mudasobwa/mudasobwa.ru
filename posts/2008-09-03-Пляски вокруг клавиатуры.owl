@@ -1,0 +1,69 @@
+---
+title: 'Пляски вокруг клавиатуры'
+permalink: /post/show/1114
+date: '2008-09-03 07:54:57'
+categories: [txt]
+---
+
+λpartial alphanumeric_keys ⏎
+xkb_symbols "winkeys" { ⏎
+    include "ru(basic)" ⏎
+    name[Group1]= "Russia - Winkeys"; ⏎
+    key <TLDE> {        [ NoSymbol, NoSymbol, 0x1000308,      0x1000306 ]       }; ⏎
+    key <AE01> {        [ NoSymbol, NoSymbol, 0x100203c,      0x100203d ]       }; ⏎
+    key <AE02> {        [ NoSymbol, NoSymbol, 0x1002039,      0x100203a ]       }; ⏎
+    key <AE03> {        [ 3,      numerosign, numbersign,     0x1002052 ]       }; ⏎
+    key <AE04> {        [ 4,       semicolon, 0x100204f,      0x1002027 ]       }; ⏎
+    key <AE05> {        [ 5,         percent, 0x1002030,      0x1002031 ]       }; ⏎
+    key <AE06> {        [ 6,          colon,  0x100205a,      0x100205d ]       }; ⏎
+    key <AE07> {        [ 7,       question,  0x1002020,      0x1002021 ]       }; ⏎
+    key <AE08> {        [ 8,        asterisk, 0x100221e,      0x1002055 ]       }; ⏎
+    key <AE09> {        [ NoSymbol, NoSymbol, 0x1002035,      0x1002036 ]       }; ⏎
+    key <AE10> {        [ NoSymbol, NoSymbol, 0x1002032,      0x1002033 ]       }; ⏎
+    key <AE11> {        [ NoSymbol, NoSymbol, emdash,         endash    ]       }; ⏎
+    key <AE12> {        [ NoSymbol, NoSymbol, 0x10000b1,      0x1002260 ]       }; ⏎
+    key <BKSL> {        [ backslash,   slash, multiply,       division  ]       };
+
+    key <AD01> {        [ NoSymbol, NoSymbol, 0x1002611,      0x1002612 ]       }; ⏎
+    key <AD02> {        [ NoSymbol, NoSymbol, 0x1002208,      0x1002209 ]       }; ⏎
+    key <AD03> {        [ NoSymbol, NoSymbol, EuroSign,       degree    ]       }; ⏎
+    key <AD04> {        [ NoSymbol, NoSymbol, copyright,     registered ]       }; ⏎
+    key <AD05> {        [ NoSymbol, NoSymbol, trademark,      cent      ]       }; ⏎
+    key <AD06> {        [ NoSymbol, NoSymbol, yen,            notsign   ]       }; ⏎
+    key <AD07> {        [ NoSymbol, NoSymbol, multiply,       division  ]       }; ⏎
+    key <AD08> {        [ NoSymbol, NoSymbol, uparrow,        0x10021e7 ]       }; ⏎
+    key <AD09> {        [ NoSymbol, NoSymbol, 0x1002264,      0x1002265 ]       }; ⏎
+    key <AD10> {        [ NoSymbol, NoSymbol, 0x1002213,      0x1002248 ]       }; ⏎
+    key <AD11> {        [ NoSymbol, NoSymbol, 0x100263a,      0x10021e0 ]       }; ⏎
+    key <AD12> {        [ NoSymbol, NoSymbol, 0x1002639,      0x10021e2 ]       };
+
+    key <AC01> {        [ NoSymbol, NoSymbol, ae,             AE        ]       }; ⏎
+    key <AC02> {        [ NoSymbol, NoSymbol, 0x1002660,      0x1002664 ]       }; ⏎
+    key <AC03> {        [ NoSymbol, NoSymbol, 0x1002662,      0x1002666 ]       }; ⏎
+    key <AC04> {        [ NoSymbol, NoSymbol, 0x10021c4,      0x10021c5 ]       }; ⏎
+    key <AC05> {        [ NoSymbol, NoSymbol, 0x1002605,      0x1002606 ]       }; ⏎
+    key <AC06> {        [ NoSymbol, NoSymbol, 0x1002661,      0x1002665 ]       }; ⏎
+    key <AC07> {        [ NoSymbol, NoSymbol, leftarrow,      0x10021e6 ]       }; ⏎
+    key <AC08> {        [ NoSymbol, NoSymbol, rightarrow,     0x10021e8 ]       }; ⏎
+    key <AC09> {        [ NoSymbol, NoSymbol, 0x100260e,      0x100261e ]       }; ⏎
+    key <AC10> {        [ NoSymbol, NoSymbol, 0x1002018,      0x100201f ]       }; ⏎
+    key <AC11> {        [ NoSymbol, NoSymbol, 0x1002019,      0x100201d ]       };
+
+    key <AB01> {        [ NoSymbol, NoSymbol, 0x1000301,      0x1000336 ]       }; ⏎
+    key <AB02> {        [ NoSymbol, NoSymbol, 0x1002219,      0x10022c5 ]       }; ⏎
+    key <AB03> {        [ NoSymbol, NoSymbol, 0x1002663,      0x1002667 ]       }; ⏎
+    key <AB04> {        [ NoSymbol, NoSymbol, 0x1002680,      0x1002681 ]       }; ⏎
+    key <AB05> {        [ NoSymbol, NoSymbol, 0x1002682,      0x1002683 ]       }; ⏎
+    key <AB06> {        [ NoSymbol, NoSymbol, 0x1002684,      0x1002685 ]       }; ⏎
+    key <AB07> {        [ NoSymbol, NoSymbol, downarrow,      0x10021e9 ]       }; ⏎
+    key <AB08> {        [ NoSymbol, NoSymbol, guillemotleft,  0x100201e ]       }; ⏎
+    key <AB09> {        [ NoSymbol, NoSymbol, guillemotright, 0x100201c ]       }; ⏎
+    key <AB10> {        [ period,      comma, 0x1002026,      0x1002025 ]       };
+
+    key <SPCE> {        [ space,       space, nobreakspace, nobreakspace ]      };
+
+    include "level3(ralt_switch)"
+
+};λ
+
+Положить эту красоту нужно в λ/etc/X11/xkb/symbols/ruλ

@@ -1,0 +1,13 @@
+title : '✎ mudasobwa'
+tagline: 'Ipsissima Verba'
+author :
+  name : 'Alexei «Борисыч» Matyushkin'
+  email : am@mudasobwa.ru
+  github : mudasobwa
+  twitter : mudasobwa
+  feedburner : mudasobwa
+
+navigation :
+  - archive
+  - tags
+  - license

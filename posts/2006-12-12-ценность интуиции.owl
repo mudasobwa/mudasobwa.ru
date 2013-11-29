@@ -1,0 +1,20 @@
+---
+title: 'ценность интуиции'
+permalink: /post/show/293
+date: '2006-12-12 04:50:08'
+categories: [txt]
+---
+
+Еще старик Горацио был осведомлен о существовании вокруг нас вещей, которые неведомы даже мудрым. Иногда, а точнее — часто, бытие выписывает такие кульбиты, что полноценно среагировать в режиме реального времени попросту невозможно. Нехватка знаний ли, фактического материала, времени для принятия решения — что-нибудь, да помешает.
+
+В таких ситуациях, чтобы не попасть впросак, необходимо принимать решение, основываясь на интуиции. То есть, на способности аккумулировать и перерабатывать опыт.
+
+Вот и я, когда-то давно, выбирая CMS для сайта, основывался, в основном, на чисто эстетических умозрительных заключениях.
+
+А вчера пришлось выполнять просьбу друга, и прикручивать непростую выборку по нестандартному полю данных. Да, мне пришлось потратить время на это. Учитывая, что я совершенно не знаю этого языка.
+
+Зато изящность решения — лично меня — впечатлила:
+
+Λ
+  <xar:if  condition= "xarModIsAvailable('dynamicdata')" >      <div  class= "author_more" >        <h3  class= "xar-mod-title" > Все статьи автора: </h3>        <ul>          <xar:set  name= "$articles" > #xarModAPIFunc('articles','user','getall',              array('extra'=>array('dynamicdata')))# </xar:set>          <xar:foreach  in= "$articles"  value= "$article" >            <xar:set  name= "curr_author" > #xarModAPIFunc('dynamicdata','user','getitem',              array('itemtype'=>$ptid,'itemid'=>$article[['aid'],'fieldlist'=>'str_author'))# </xar:set>            <xar:if  condition= "$str_author eq $curr_author[['str_author']" >              <xar:if  condition= "$aid eq $article[['aid']" >                <li> #$article[['title']# </li>                <xar:else/>                <li><a  href= "&baseurl;#$article[['aid']#" > #$article[['title']# </a></li>              </xar:if>            </xar:if>          </xar:foreach>        </ul>      </div>   </xar:if> 
+Λ

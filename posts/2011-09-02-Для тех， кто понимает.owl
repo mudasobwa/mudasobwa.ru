@@ -1,0 +1,14 @@
+---
+title: 'Для тех, кто понимает'
+permalink: /post/show/4200
+date: '2011-09-02 11:12:03'
+categories: [ref]
+---
+
+
+〉 Λ
+@@ -348,7 +348,7 @@ case "$DISTRO" in- rm -rf /usr /lib/nvidia-current/xorg/xorg+ rm -rf /usr/lib/nvidia-current/xorg/xorg
+Λ
+‒ https://github.com/MrMEEE/bumblebee/commit/a047be85247755cdbe0acce6#diff-1, https://github.com/MrMEEE/bumblebee/commit/a047be85247755cdbe0acce6#diff-1
+
+Спасибо,  Лёха¹http://twitter.com/#!/fufler !

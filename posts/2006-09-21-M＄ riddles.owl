@@ -1,0 +1,20 @@
+---
+title: 'M$ riddles'
+permalink: /post/show/218
+date: '2006-09-21 09:35:24'
+categories: [ref]
+---
+
+
+〉 §3 common
+
+• There are 3 baskets. one of them have apples, one has oranges only and the other has mixture of apples and oranges. The labels on their baskets always lie. (i.e. if the label says oranges, you are sure that it doesn't have oranges only,it could be a mixture) The task is to pick one basket and pick only one fruit from it and then correctly label all the three baskets.
+• You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weighings how do you find the defective one?
+
+§3 programming (simple but elegant)
+
+• Give a one-line C expression to test whether a number is a power of 2. No loops allowed - it's a simple test.
+• Give a fast way to multiply a number by 7
+‒ usc.edu, http://halcyon.usc.edu/~kiran/msqs.html
+
+These were unknown for me. The complete list is available [here|http://halcyon.usc.edu/~kiran/msqs.html]

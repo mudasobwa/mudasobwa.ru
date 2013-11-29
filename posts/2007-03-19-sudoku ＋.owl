@@ -1,0 +1,54 @@
+---
+title: 'sudoku +'
+permalink: /post/show/392
+date: '2007-03-19 14:33:35'
+categories: [ref]
+---
+
+
+〉 • Check for Solved Squares
+• Show Possibles 
+• 1: Singles in Row/Col  
+• 2: Singles in Box 
+• 3: Naked Pairs/Triples 
+• 4: Hidden Pairs/Triples
+• 5: Naked Quads
+• 6: Pointing Pairs 
+• 7: Box/Line Reduction 
+• Tough Strategies
+• 8: X-Wing 
+• 9: Simple Colouring 
+• 10: Y-Wing 
+• 11: Sword-Fish 
+• Diabolical Strategies
+• 
+• 12: Multivalue X-Wing 
+• 13: Jelly-Fish 
+• 14: X-Cycles 
+• 15: Unique Rectangles 
+ • 16: XYZ Wing / WXYZ Wing 
+ • 17: Remote Pairs 
+ • 18: XY-Chain 
+ • 19: Aligned Pair Exclusion 
+ • 20: BUG 
+ • Evil Strategies
+• 21: Sue-de-Coq 
+ • 22: Multi Colouring 
+ • 23: Grouped X-Cycles 
+ • 24: Forcing Chains 
+ • 25: Empty Rectangles 
+ • 26: Finned X-Wing 
+ • 27: Finned Sword-Fish 
+ • 28: Guardians 
+ • 29: Almost Locked Sets 
+ • 30: Altern. Inference Chains
+ • 31: AIC with Groups 
+ • 32: AIC with ALSs 
+ • 33: Death Blossom 
+ • 34: Pattern Overlay Method 
+ • "Trial and Error"
+• 35: Nishio 
+ • 36: Bowman Bingo
+‒ scanraid.com, http://www.scanraid.com/sudoku.htm
+
+58 sudoku strategies and even more…

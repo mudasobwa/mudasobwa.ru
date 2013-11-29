@@ -1,0 +1,8 @@
+---
+title: 'может быть хватит скулить, тупые аддикты?'
+permalink: /post/show/3512
+date: '2009-12-08 20:00:00'
+categories: [txt]
+---
+
+λam@localhost $ cat friendfeed | grep -i коммент | awk {"print $1;"} | ≡ban≡λ

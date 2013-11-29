@@ -1,0 +1,274 @@
+---
+title: 'The case of the 500-mile email'
+permalink: /post/show/3622
+date: '2010-02-17 20:00:00'
+categories: [txt]
+---
+
+Я от этого шедевра в таком восторге, что решил даже перевести для изучавших французский.
+
+〉 I was working in a job running the campus email system some years ago when
+I got a call from the chairman of the statistics department.
+‘We’re having a problem sending email out of the department.’
+‘What’s the problem?’ I asked. ⏎
+‘We can’t send mail more than 500 miles,’ the chairman explained.
+
+≡From:≡ trey@sage.org Fri Nov 29 18:00:49 2002 ⏎
+≡Date:≡ Sun, 24 Nov 2002 21:03:02 -0500 (EST) ⏎
+≡From:≡ Trey Harris <trey@sage.org> ⏎
+≡To:≡ sage-members@sage.org ⏎
+≡Subject:≡ The case of the 500-mile email (was RE: [SAGE] Favorite impossible task?)
+
+Here’s a problem that ≈sounded≈
+impossible… I almost regret posting the story to a wide audience,
+because it makes a great tale over drinks at a conference. :-) The
+story is slightly altered in order to protect the guilty, elide over
+irrelevant and boring details, and generally make the whole thing more
+entertaining.
+
+I was working in a job running the campus email
+system some years ago when I got a call from the chairman of the
+statistics department.
+
+‘We’re having a problem sending email out of the department.’ ⏎
+‘What’s the problem?’ I asked. ⏎
+‘We can’t send mail more than 500 miles,’ the chairman explained. ⏎
+I choked on my latte. ‘Come again?’ ⏎
+‘We can’t send mail farther than 500 miles from here,’ he repeated. ‘A
+little bit more, actually. Call it 520 miles. But no farther.’ ⏎
+‘Um... Email really doesn’t work that way, generally,’ I said, trying to keep
+panic out of my voice. One doesn’t display panic when speaking to a
+department chairman, even of a relatively impoverished department like
+statistics. ‘What makes you think you can’t send mail more than
+500miles?’ ⏎
+‘It’s not what I ≈think≈,’ the chairman replied testily. ‘You see, when we first noticed this happening, a few days ago—’ ⏎
+‘You waited a few DAYS?’ I interrupted, a tremor tinging my voice. ‘And you couldn’t send email this whole time?’ ⏎
+‘We could send email. Just not more than—’ ⏎
+‘—500 miles, yes,’ I finished for him, ‘I got that. But why didn’t you call earlier?’ ⏎
+‘Well, we hadn’t collected enough data to be sure of what was going on until just now.’
+Right. This is the chairman of ≈statistics≈. ‘Anyway, I asked one of the geostatisticians to look into it—’ ⏎
+‘Geostatisticians…’ ⏎
+‘—yes, and she’s produced a map showing the radius within which we can send
+email to be slightly more than 500 miles. There are a number of
+destinations within that radius that we can’t reach, either, or reach
+sporadically, but we can never email farther than this radius.’ ⏎
+‘I see,’ I said, and put my head in my hands. ‘When did this start? A few
+days ago, you said, but did anything change in your systems at that time?’ ⏎
+‘Well, the consultant came in and patched our server and
+rebooted it. But I called him, and he said he didn’t touch the mail system.’ ⏎
+‘Okay, let me take a look, and I’ll call you back,’ I
+said, scarcely believing that I was playing along. It wasn’t April
+Fool’s Day. I tried to remember if someone owed me a practical joke.
+
+I logged into their department’s server, and sent a few test mails. This
+was in the Research Triangle of North Carolina, and a test mail to my
+own account was delivered without a hitch. Ditto for one sent to
+Richmond, and Atlanta, and Washington. Another to Princeton (400 miles)
+worked.
+
+But then I tried to send an email to Memphis (600 miles). It
+failed. Boston, failed. Detroit, failed. I got out my address book and
+started trying to narrow this down. New York (420 miles) worked, but
+Providence (580 miles) failed.
+
+I was beginning to wonder if I had
+lost my sanity. I tried emailing a friend who lived in North Carolina,
+but whose ISP was in Seattle.
+
+Thankfully, it failed. If the problem
+had had to do with the geography of the human recipient and not his
+mail server, I think I would have broken down in tears.
+
+Having established that—unbelievably—the problem as reported was true,
+and repeatable, I took a look at the λsendmail.cfλ file. It looked
+fairly normal. In fact, it looked familiar.
+
+I diffed it against the sendmail.cf in my home directory. It hadn’t been
+altered—it was a sendmail.cf I had written. And I was fairly certain I
+hadn’t enabled the ‘FAIL_MAIL_OVER_500_MILES’ option. At a loss, I
+telnetted into the SMTP port. The server happily responded with a SunOS
+sendmail banner.
+
+Wait a minute... a SunOS sendmail banner? At the
+time, Sun was still shipping Sendmail 5 with its operating system, even
+though Sendmail 8 was fairly mature. Being a good system administrator,
+I had standardized on Sendmail 8. And also being a good system
+administrator, I had written aλsendmail.cfλ that used the
+nice long self-documenting option and variable names available in
+Sendmail 8 rather than the cryptic punctuation-mark codes that had been
+used in Sendmail 5.
+
+The pieces fell into place, all at once, and
+I again choked on the dregs of my now-cold latte. When the consultant
+had ‘patched the server,’ he had apparently upgraded the version of
+SunOS, and in so doing ≈downgraded≈ Sendmail. The upgrade helpfully
+left the λsendmail.cfλ alone, even though it was now the wrong version.
+
+It so happens that Sendmail 5—at least, the version that Sun shipped,
+which had some tweaks—could deal with the Sendmail 8 λsendmail.cfλ,
+as most of the rules had at that point remained unaltered. But the new
+long configuration options—those it saw as junk, and skipped. And
+thesendmail binary had no defaults compiled in for most of these, so,
+finding no suitable settings in the λsendmail.cfλ file, they were set to zero.
+
+One of the settings that was set to zero was the timeout to connect to the
+remote SMTP server. Some experimentation established that on this
+particular machine with its typical load, a zero timeout would abort a
+connect call in slightly over three milliseconds.
+
+An odd feature of
+our campus network at the time was that it was 100% switched. An
+outgoing packet wouldn’t incur a router delay until hitting the POP
+and reaching a router on the far side. So time to connect to a
+lightly-loaded remote host on a nearby network would actually largely
+begoverned by the speed of light distance to the destination rather
+than by incidental router delays.
+
+Feeling slightly giddy, I typed into my shell:
+
+Λ
+$ units
+1311 units, 63 prefixes
+    You have: 3 millilightseconds
+    You want: miles
+            * 558.84719
+            / 0.0017893979
+Λ
+
+‘500 miles, or a little bit more.’ ⏎
+— Trey Harris¹http://www.ibiblio.org/harris/500milemail.html
+
+——
+
+≡Тема:≡ Электронная почта малой дальности
+
+Эта история ≈звучит≈
+неправдоподобно… Мне ужасно не хотелось публиковать ее для широкого
+круга читателей, потому что лучше байки для рассказа в перерывах на
+скучных конференциях просто не найти. :-) Я немного изменил
+несущественные подробности, чтобы не разглашать корпоративные секреты,
+выбросил малозначимые и не имеющие отношения к делу детали и ну и
+приукрасил, конечно, слегка.
+
+Несколько лет тому назад я
+администрировал почтовый сервер в университете. И вдруг утром раздался
+звонок от декана факультета статистики. ⏎
+— У нас с факультета не отправляется электронная почта. ⏎
+— А в чем проблема? — откликнулся я. ⏎
+— Мы не можем отправить почту на расстояние, превышающее 500 миль. — Объяснил декан.
+
+Я поперхнулся кофе. ⏎
+— Простите? ⏎
+— Мы не можем отослать почту далее, чем за 500 миль отсюда, — повторил
+декан. — Ну, немного больше. Миль на 520 еще можем. Но не дальше. ⏎
+— Э-э-э… Электронная почта обычно ведет себя не совсем так. — Промямлил
+я, пытаясь скрыть истерические нотки в голосе. Когда разговариваешь с
+деканом, пусть даже такого малозаметного факультета, как
+статистический, панику демонстрировать не стоит. — Почему вы думаете,
+что не можете отсылать почту дальше, чем на 500 миль? ⏎
+— Я не ≈думаю≈, — ответил декан раздраженно. — Понимаете, когда мы впервые столкнулись с этой проблемой, несколько дней тому назад… ⏎
+— И вы ждали НЕСКОЛЬКО дней? — перебил я, противно дрожащим голосом, — вы не могли отсылать почту все это время? ⏎
+— Мы могли отсылать почту. Просто не дальше, чем… ⏎
+— …ага, на 500 миль. — Закончил я за него. — Я понял. Но почему вы не позвонили раньше? ⏎
+— Ну, у нас было недостаточно данных, чтобы заявлять об этом с уверенностью. — Естественно,
+это же декан факультета ≈статистики≈. — В любом случае, я попросил одного из наших геостатистиков разобраться… ⏎
+— Геостатистиков… ⏎
+— Да, и она подготовила карту, показывающую примерный радиус, внутри
+которого мы можем отправлять сообщения. Он немного больше пятисот миль.
+Внутри него тоже есть места, куда почта или не ходит, или ходит через
+раз, но за его пределы мы не можем отослать ни одного письма. ⏎
+— Понятно, — сказал я и схватился за голову. — И когда это началось?
+Несколько дней назад, вы сказали? Что-нибудь менялось в вашей системе
+примерно в это время? ⏎
+— Ну, приходил техник, обновил программное обеспечение и перегрузил
+компьютер. Но он клянется, что не трогал почтовые настройки. ⏎
+— Хорошо, я сейчас гляну, что там стряслось и перезвоню вам. — Проговорил
+я, с трудом веря в происходящее со мной. Сегодня же не первое апреля, в
+конце концов. Я попытался припомнить, кто бы мог сыграть со мной такую
+шутку.
+
+Я подключился к серверу их факультета и отослал несколько
+тестовых сообщений. Дело происходило в Северной Каролине и письмо на
+мой собственный адрес долетело со свистом. Та же история с письмами в
+Ричмонд, Атланту и Вашингтон. Еще одно — в Принстон (400 миль).
+
+Доставлено.
+
+И тут я попытался отправить почту в Мемфис (600 миль).
+Не прошло. Бостон — вернулось. Детройт — вернулось. Я заглянул в свою
+адресную книгу и стал вести более прицельный огонь. В Нью-Йорк (420
+миль) — дошло, но из Провиденса (580 миль) — вернулось.
+
+Я подумал, что теряю рассудок. Попробовал отправить письмо моему знакомому,
+который жил неподалеку в Северной Каролине, но пользовался услугами
+провайдера из Сиэтла.
+
+К счастью, письмо вернулось. Если бы проблемы
+с доставкой зависели от того, где в данный момент находится лично
+абонент, я бы разрыдался прямо на рабочем месте.
+
+Итак, я убедился в
+том, что проблема, описанная деканом действительно (невозможно
+поверить!) существует, и воспроизводится, и стал смотреть на
+конфигурационный файл почтового сервера λsendmail.cfλ. Он выглядел
+вполне нормально. Более того, он выглядел подозрительно знакомо.
+
+Я сравнил его с таким же файлом у себя на компьютере. Отличий не было.
+Это был файл, написанный мной собственноручно. И я был абсолютно
+уверен, что опцию НЕ_ДОСТАВЛЯТЬ_ПОЧТУ_НА_ДАЛЬНИЕ_РАССТОЯНИЯ
+(‘FAIL_MAIL_OVER_500_MILES’) я не включал. Наконец, я удаленно
+подсоединился к почтовому серверу. Тот радостно представился, порадовав
+меня приветствием операционной системы «SunOS».
+
+Секундочку…
+
+Приветствие почтового сервера под SunOS? В то время, Sun все еще
+поставлял со своей операционной системой почтовый сервер пятой версии,
+хотя уже даже восьмая была вполне стабильна. Будучи неплохим системным
+администратором, я давно перевел свои сервера на восьмерку. А еще,
+опять-таки будучи неплохим системным администратором, я писал
+конфигурационные файлы внятно, с использованием длинных, очевидных имен
+опций и переменных, которые стали доступны в новых версиях сервера
+вместо той клинописи из запятых и точек, которая использовалась в
+пятерке.
+
+Кусочки мозаики внезапно разом встали на место и я
+вновь поперхнулся давно остывшим кофе. Когда техник «обновлял
+программное обеспечение», он, разумеется, обновлял версию операционной
+системы, а заодно и вернул мой заботливо установленный там почтовый
+сервер к его «законной» пятой версии. А файлы конфигурации, конечно же,
+остались мои — велика ли беда, что предназначались они совсем не для
+того.
+
+Так получилось, что почтовый сервер «Sendmail» (как минимум,
+пятой версии, распространяемой Sun’ом) — чихать хотел на непонятные
+ему переменные и опции, и вообще делал вид, что их не замечает. Для
+большинства из них не было значений по умолчанию и, не найдя ничего в
+конфигурационном файле, сервер их всех обнулял.
+
+Одним из таких
+параметров, установленных в ноль, оказалось минимальное время ожидания
+ответа от удаленного почтового сервера. Несколько экспериментов помогли
+установить, что на этой машине, с этими настройками, ноль примерно
+равен трем миллисекундам, по достижении которых попытки установить
+связь прекращаются.
+
+В этом университете вся сеть была устроена таким
+образом, что соединение считалось установленным, когда отвечал
+удаленный компьютер. Никаких маршрутизаторов с их задержками — только
+скорость движения электронов по кабелю влияла на скорость установки
+соединения.
+
+Чувствуя, как у меня внезапно закружилась голова, я набрал в командной строке:
+
+Λ
+$ units
+1311 units, 63 prefixes
+    You have: 3 millilightseconds
+    You want: miles
+            * 558.84719
+            / 0.0017893979
+Λ
+
+Ну да. ≈Пятьсот миль; ну, чуть побольше.≈ ⏎
+— Трей Харрис¹http://www.ibiblio.org/harris/500milemail.html

@@ -1,0 +1,195 @@
+---
+title: 'RML'
+permalink: /post/show/981
+date: '2005-02-04 14:45:40'
+categories: [txt]
+---
+
+§3 Bootstrap and Macrofy!
+
+☇ p16262-2 
+
+It is probably well known, that the programmers are either lazyor stupid. As a matter of fact, I doubt I would bet a nickel to saywhich one is true, but one of them definitely is. We are the happiestcreatures all around, since we know that the accounting task of a sortmay be solved within a couple of hours by writing a pair of linesof code. And that knowledge made us lazy. I mind thinking it madeus stupid.
+
+☇ p16262-3 
+
+Just before the wheel was invented the programming was really hard job,demanding special knowledge and march of intellect. The situationchanges, but the rumors are still around.
+
+☇ p16262-4 
+
+When assembling language was mostly ousted by slightly readable sourcecode, the programming diaspora immediately started to find out howthe life may be made easier. Instead of writing dozens of processorinstructions, the programmers wrote twenty lines of code. And thecompiler did the rest for them. That was in fact really necessary,to save the time for drinking coffee. And there were macro-likepreprocessing instructions introduced. They let write two linesof code, instead of twenty—the rest eighteen were magically produced by so-called preprocessor and only than the compiler was permitted to make two hundreds of instructions. That was almost fifty years ago.
+
+☇ h16262-2 §4 Macros	
+
+	• C  macros were known to the most part of programmers (I mean core programmers, well, hackers—not the freak  PHP  writers, of course);
+		• COBOL  actually has had (ouch, I hope it ≡had had≡  them) macros—those included  copy  declarations of structures;
+		• Nowadays even Java programmers invent the same—even besides Java5.   XTE¹http://guglhupf.net/?q=node/view/516   by Guglhupf, for instance, uses macro declaration to simplify  XSLT  processing.
+
+☇ p16262-5 
+
+Then, the object-oriented programming ( OOP ) leapt out to get rid of the code-reuse in favour of write-just-once. The advantages of it were so clear that  OOP  almost knocked the obsolete (sorry, geeks) functional programming out.
+
+☇ p16262-6 
+
+But that was not as cute as all hi-techprogrammers expected. The applications became larger, the complexitygrew and code was still unreadable and very hard maintainable. And thegenious OOP backing was created soon.
+
+☇ h16262-3 §4 AOP
+
+☇ p16262-7 
+
+Aspects brought the very new concept against object oriented programming. Since objects are known to be easy handled by OOP,the communication between them is not, the new aspect oriented paradigmtook it's chance. The most famous and afterwards popular implementationof aspects is AspectJ :	
+
+	•    AspectJ¹http://eclipse.org/aspectj   is `a seamless aspect-oriented extension to the Java™ programming language, Java platform compatible and easy to learn.'
+
+☇ p16262-8 
+
+But even this beauty and clever idea was unable to help well enoughto raise the effectivity of programmers (and, remember, to decreasethe working time) dramatically. And then:—
+
+☇ h16262-4 §4 Design by Contract
+
+☇ p16262-9 
+
+In  DbC¹http://www.google.com/search?q=Design+By+Contract ,  the designer considers the conditions required for a module or method to successfully perform its intended services, the ≈preconditions≈,  and what results it can guarantee to deliver, the ≈postconditions≈,  if the preconditions are met. The designer can also specify  ≈invariants≈  that must be satisfied. Below are the most popular implementations:	
+
+	•    Eiffel¹http://archive.eiffel.com/eiffel/page.html 		which is accordingly to their intro `the pioneer of Design by Contract		and the Component Revolution. … The notion of Design by Contract		is central in the systematic approach to object-oriented software construction, as embodied in the Eiffel method.'
+		•    Barter¹http://barter.sourceforge.net/ 		is `a tool for increasing the quality of applications written in Java.		It allows the programmer to use DbC and define other development		aspects right in the classes and interfaces where they are relevant, ≡as JavaDoc comments≡.  It is essentially a code generator for  AspectJ¹http://aspectj.org/ ,  implemented as an   xDoclet¹http://xdoclet.sourceforge.net/   task.
+		•    Contract4J¹http://www.contract4j.org/ 		`provides support for defining DbC tests and performing them		at runtime, using Java 5 annotations to define the condition tests.		The advantage of annotations over javadoc-style tags is the fact that the JVM can be aware of the annotations at runtime. Contract4J is also designed to support back-end generation of contract test code for other aspect systems, like   Spring¹http://www.springframework.org/ ,    AspectWerkz¹http://aspectwerkz.codehaus.org/ ,    JBoss AOP¹http://www.jboss.org/products/aop ,  and others.'
+
+☇ p16262-10 
+
+Besides all the techniques above, the modelling languages has beenplaying their role. The huge business applications are still reallyhard to maintain and the business logic requires the tool to bedescribed. Basing on  MOF¹http://www.omg.org/mof/ ,  the  UML¹http://www.uml.org/   language sweepingly spreaded among the world's greatest IT-corporations.
+
+☇ p16262-11 
+
+A lot of companies were successful with it, some were even happy.But it was too complicated to use. Simply overcomplicated. My opinion.
+
+☇ p16262-12 
+
+And I decided to yield all the best I can from the above, to to profitby the pioneers' mistakes, to examine pros and contras and—to absorbthe extract, throwing the rest away. I now really need the concept of apowerful, easy-to-use, reliable and distensible, flexible and effective tool to spend in idle lazyness.
+
+☇ h16262-5 §3 Project-wide operations
+
+☇ p16262-13 
+
+Before I start to annoy the audience with my own ideas about how theperfect development tool should look like, I have to mention the otherside of the moon—the project mainteinance. It's role if offenunderestimated, falling the easy-to-succeed projects into an abyss.
+
+☇ p16262-14 
+
+Let us imagine that we have the Hello-World-Application stage successfully passed. Now we are ready to start our killer-app, dealing with huge databases, describing and implementing tons of overcomplicated business-logic, providing a dozen of different UIs. We definitely need the tool to drive the project.
+
+☇ p16262-15 
+
+Sometimes I dream about the epoch of pure  Makefiles  and get awake, dripping with death-damp. Luckily, the times change. As for now, we definitely have the abilities to be lazy with project maintainance:	
+
+	•  The very first approach was to create some “bootstrapping” tools to produce  Makefiles		according to the information retrieven from project directory structure		and source files themselves. These techniques were growing up quickly,		mutating under different Unices circumstanses and taking up the best		all around. They are still widely using in Linux—the  autoconf¹http://www.gnu.org/software/autoconf  /  automake¹http://www.gnu.org/software/automake   family;
+		•  IDE-driven project files. These are known to be		platform/application specific, nearly impossible to maintain outside		the IDE and that is why the tendency is to get rid of IDE-specific project files in favour of IDE-understandable generic project files (e.g.   NetBeans¹http://www.netbeans.org/   moved to ANT-driven projects since the version 4.0;)
+		•  One of the genious pioneers in clever project handling—Apache's   ANT¹http://ant.apache.org/ ,  introduced pure   XML¹http://xml.org/   project descriptions files. ANT `is a Java-based build tool. In theory, it is kind of like Make, but without Make's wrinkles.' Nowadays ANT has it's follower   Maven¹http://maven.apache.org/ ,  which `is a software project management and comprehension tool. Based on the concept of a project object model (  POM¹http://maven.apache.org/reference/glossary.html#POM  ), Maven can manage a project's build, reporting and documentation from a central piece of information;'
+		•  The most modern and promising build tool is  SconS¹http://www.scons.org/ .  The original description (though not too descriptive) follows: ` ≈SCons≈  is an Open Source software construction tool—that is, a next-generation build tool. Think of ≈SCons≈  as an improved, cross-platform substitute for the classic  Make  utility with integrated functionality similar to autoconf / automake  and compiler caches such as ccache. In short,  ≈SCons≈  is an easier, more reliable and faster way to build software.'
+
+☇ p16262-16 
+
+There are also  Perl – and Python -driven  Makefiles,and probably something else. All the tools have their own specifics;one is better in project of a sort, while other suits the needs of aproject of a kind.
+
+☇ h16262-6 §3 Reverse Modelling Language
+
+☇ h16262-7 §4 Two entities
+
+☇ p16262-17 
+
+Actually, there are two entities all around—the space and the time.Nothing more. Every entity has either size or time interval. No entityhas both. If an entity may be fingered, it is ≡object≡.  Otherwise, it has lifecircle and it is  ≡event≡.  Both types of entities, of course, has individual characteristics, called  ≡properties≡.  The properties are neither objects, nor events—they have name and value only. That's it.
+
+☇ p16262-18 
+
+Let me introduce the five axioms of the model above.	
+
+	•  There are ≡objects≡,  determined by physical size and ≡events≡,  determined by lifecircle. Both have  ≡properties≡ .
+		•  An ≡object≡  may ≈belong≈  to another object. An ≡object≡  may ≈contain≈  one or more other objects.
+		•  An ≡event≡  always  ≈belongs≈  to one and only  ≡object≡.  If an  ≡event≡   ≈belongs≈  to another  ≡event≡,  it is considered to ≈belong≈  the parent  ≡object≡  of this  ≡event≡  (this rule may be applied recursively).
+		•  The ≈belonging≈  always has a ≈lifecircle≈ .
+		•   ≡Event≡  may link  ≡object≡ (s) and other  ≡event≡ (s).
+
+☇ p16262-19 
+
+≡NB:≡  On this stage there is no business logic at all—we deal yet with the entities only.
+
+☇ h16262-8 §4 Notation
+
+☇ p16262-20 
+
+The notation is always a bottleneck in each modelling language.The bundles of written sentenses are hard to overlook (the worstexample is an asm  code), while the diagrams are sweepingly becoming messy heap of crossing lines and rectangles. 
+
+☇ p16262-21 
+
+I suprisingly would use the very old notation—the  C++ -like one. Please stop laugh at me and let me finish.
+
+☇ p16262-22 
+
+Objects contain either objects or events. We are to have differentdesignations for two types of belonging. There are collections. We areto have a designation for. Plus, entities have properties. So,the notation follows:
+
+	•  each belonging rule is written in a separate line;
+		•  object containment is designated with dot between objects (as class membership in C++ );
+		•  event belonging is designated with an arrow (as class members, called on pointer in C++ );
+		•  multiple containment is designated with square brackets (as arrays in C++ );
+		•  there might be templates for entities (e.g. person, having		predefined properties `name', `lastname', `age', `address'). Template		derivation is designated with less-greater signs, as templates in C++ );
+		•  events have trailing brackets (as functions in C++ );
+		•  the business logic is described somewhere outside;
+		•  all the rules above are applied to describe the model, taken from the ≈ ≡required output documents only≡ ≈ .
+
+☇ p16262-23 
+
+The last rule is probably to be discussed slightly more detailed.
+
+☇ h16262-9 §4 Software by reports
+
+☇ p16262-24 
+
+A general purpose of every software all around is to producethe reports. I already hear the indignant of driver writers at me—well,I do talk about GUI-related applications. Well, about some of them.
+
+☇ p16262-25 
+
+My approach is to describe the project logic (object logic, followed by business logic and representation logic)  ≡basing on reports requested≡by needs of the project. When I say “report” here I actually mean“feedback”. The whole set of documents we need to be produced by thesoftware. 
+
+☇ p16262-26 
+
+The first design stage, therefore, is to provide a full (havingfullness, rather that finally indestensible) set of desired applicationfeedback. Three printable reports, alarm twice a day and a .log  file in /var/logs —something like that.
+
+☇ h16262-10 §4 Notation example
+
+☇ p16262-27 
+
+Consider we won a tender to produce a software for FIFA Champion'sLeague TV translations. These accidentally appearing captions, “12:20 ↔ Real Madrid 2 : 1 Manchester United ↔ YC (Beckham, 79)”, you know.
+
+☇ p16262-28 
+
+I would solve the task of writing detailed design in the following way:	
+
+	•  First of all I'll draw all the reports they need:				
+		•  Teams at the start (goalkeeper + 10 players + <=11 reserver players + coach);
+				•  Score during the match;
+				•  Accident during the match (yellow/red card, goal, exchange);
+				•  Championship table of scores.
+		
+		
+		•  Secondary, I'll draw reports on separate papersheets.
+		•  Finally, I'll write down the whole set of rules for objects/events under each report.
+
+☇ p16262-29 
+
+For instance, for the first example (teams at the beginning), I'll yield something like this:
+
+〉 	λ<person>  {lastname, name}λ ⏎
+	λ	player <person> {number}λ ⏎
+λ		coach <person> λ ⏎
+λ		team. coach λ ⏎
+λ		team. player[] λ ⏎
+λ		player →play (*|player →play (|*))		λ☇ p16262-30 
+
+Despite the difference between field player and goalkeaper, I have the proper description of the Feedback 1.
+
+☇ p16262-31 
+
+The last rule is to be described more precisely: bracket syntax for events utilizes bar-sign to designate start/finish states of an event. E.g.  (*|)  means started and continues infinitely, while  (*|player→play(|*))  means started and ended by another player's event.
+
+☇ p16262-32 
+
+Nobody wants to perform the excessive duties and neither do I. That's why the  ≈restoring of modularity by developing the cross-cutting concerns≈ —is left for AOP,and it is good enough to manage. In other words, the business logic,the controlling of the behaviour—I totally left to aspects. And, hence,the syntax requires abilities to plug aspects in.

@@ -1,0 +1,116 @@
+---
+title: 'Alexei Matyushkin'
+permalink: /post/show/3921
+date: '2010-09-15 07:32:03'
+categories: [txt]
+---
+
+§3 Summary
+
+• 12/2-122, Ulitza Turku, SPb, Russia
+• mobile: ≡+7 919 4101481≡
+• e-mail: a href="mailto:am@mudasobwa.ru"am@mudasobwa.ru
+• jabber: a href="xmpp:am@mudasobwa.ru"am@mudasobwa.ru
+
+http://mudasobwa.ru/i/self.jpg
+
+I am interested in job offers at positions: System Architect, Project Manager, Project Leader, Team Leader, Guru/Evangelist.
+
+I have an experience in C/C++ pointing, SQL querying, Java threads woodoo magic (and woodoo pleasure since 6.0), Perl crypting, Javascript handling, AJAX inplacing, Python tabbing, LISP bracketing. I have been working with so many unix variants (HP-UX, Solaris, Minix, Linux) that I finally learned the proper plural form ‘unices’. I have managed the jabber client-server apps in Yandex, led warehouse management apps for US customers, developed the metamodelling tool in Berlin and created the medical apps in SPb.
+
+§3 Personal
+
+ 	•  ≡ date of birth: ≡ 30 September, 1973 
+ 	•  ≡ education: ≡ Masters Degree (SPbGTU a. k. a. Polytech) 
+ 	•  ≡ in IT: ≡ since 1992 
+ 	•  ≡ IQ: ≡ generally speaking, I am not stupid 
+ 	•  ≡ know how: ≡ to think, to state ideas, to make decisions, to be responsible for the actions 
+ 	•  ≡ temperament: ≡    P¹http://www.keirsey.com/  
+ 	•  ≡ assessment center results: ≡ γ5 — 43/48/50
+ 	•  ≡ motto: ≡ Don't solve tasks. Solve the meta-task: ‘how to solve the tasks’ 
+ 	•  ≡ languages: ≡ Russian / English; German is slightly worse
+ 	•  ≡ contact: ≡ a href="mailto:am@mudasobwa.ru"am@mudasobwa.ru 
+ 	•  ≡ bonuses: ≡ flawless presentation of thought, strong skills in management, strong skills in digging
+ 	•  ≡ preferences: ≡ I like talented people, puzzles, the dawns outside the city, to drive the ‘8-ball’ in, a cold beer, good ties, the city Irakleon 
+ 	•  ≡ dream: ≡ to find an elegant proof of Fermat's theorem 
+ 	•  ≡ I envy: ≡ people with encyclopedic knowledge
+ 	•  ≡ attitude to work: ≡ do everything I have dared, I dare for what can be done, everything can be done
+ 	•  ≡ as a matter of fact: ≡ the above is neither curriculum vitæ nor résumé
+ 	•  ≡ BTW: ≡ my name in Russian is Алексей Матюшкин
+ 
+§3 Education
+
+≡1990—1997≡  ⏎
+ SPbGTU¹http://www.spbstu-eng.ru/  (a.k.a. ‘Polytech’), Saint-Petersburg, Russia
+
+≡1992—1994≡  ⏎
+ IACM¹http://www.iacm.forth.gr/ , Crete, Greece
+
+≡1996—1999≡  ⏎
+ Instutute of Literature¹http://www.litinstitut.ru/ , Moscow, Russia
+
+§3 Work Experience
+
+≡2008—nowadays≡  ⏎
+ VNIINS, Moscow, Russia Application Software Department Chief  
+
+ 	• Technical lead and supervision of application software for the operating system «Sphere»;
+ 
+
+≡2006—2008≡  ⏎
+ Yandex, Moscow, Russia Project Manager  
+
+ 	• Management of «Ya.Online» (jabber-client) and jabber-server;
+ 	• Technical support and ideas for  Ya.ru¹http://wow.ya.ru .
+ 	• There were lots of ideas, solutions and decisions implemented.
+ 
+
+≡2004—2006≡  ⏎
+ VNIINS, Moscow, Russia Application Software Team Leader  
+
+ 	• Technical lead and supervision of application software for the operating system «MSVS»;
+ 	• I've invented and introduced visual notifications of the current level of secrecy;
+ 	• I've developed a collaborative documents access separation system.
+ 
+
+≡2001—2003≡  ⏎
+ The Rationalizer AG, Berlin, Germany GUI Team Lead  
+
+ 	• Development of visual metamodelling tool (over M3, see  MOF¹http://en.wikipedia.org/wiki/Meta-Object_Facility ). That is smth like Rational Rose, but an abstraction level upper.
+ 
+
+≡2000—2001≡  ⏎
+ SOREH Telecommunications GmbH, Berlin, Germany Softwareentwickler  
+
+ 	• Development of surveillance system for  BVG¹http://www.bvg.de .
+ 	• I have introduced a technological solution, saving over 100.000,— DM.
+ 
+
+≡1997—2000≡  ⏎
+ Paragon, SPb, Russia Team Leader  
+
+ 	• Development and support of client/server warehouse management application (Oracle/C++/COBOL/VisualBasic);
+ 	• Management and coordination with the head office in Boston, USA (we were a kind of off-shore remote facility);
+ 	• I have introduced and implemented the time management system in our department;
+ 	• We (with colleagues) have implemented the self-made bug-tracking system (hey, that was 1998).
+ 
+
+≡1994—1997≡  ⏎
+ Freelance, SPb, Russia Programming for small business clients  
+
+ 	• Medical software for computer tomography (automatic calcs for moiré dots, computation of all parameters for the non-x-rayed determining of scoliosis degree);
+ 	• Accounting software;
+ 	• Warehouse management (I used the autocalculated fields and summaries in my soft three years before Borland did so in Delphi 32).
+ 
+§3 Just my 2¢
+
+ 	• ≈Problem solving approach:≈ Don't reinvent the wheel. Algorithmization, automated code inspection and testing; «smart» data source choice; language and tools fixing upon the specifics of the project, and not the skills of participants and the personal predilections of managers.
+ 	• ≈Methodology:≈ UML + CWM (see OMG); XP (especially Pair Programming and Iteration Planning); the mandatory use of coding standards and automated testing tools; a clear understanding of patterns and anti-patterns; version control (CVS, SourceSafe, BitKeeper , GIT); AOP (e. g. AspectJ) and Modular Application Design; Inplace QA and Hallway Usability Testing.
+ 	• ≈Effectiveness principle:≈ think how to solve the meta-meta-tasks, build M3-models (see MOF). Save time.
+ 	• ≈Code optimization principle:≈ ‘bootstrap’ where possible (see, for example, the Maven project). When it's impossible, redesign and bootstrap.
+ 	• ≈Early work principle:≈ design, code, refactor. Repeat while (true || deadline).
+ 	• ≈Redundant functionality principle:≈ create the cover and provide comments in the ‘@TODO’-style. Never sell surplus until the first release.
+ 	• ≈Commenting code:≈ documentation generation (eg, JavaDoc) must be completed without error messages.
+ 	• ≈Good code principle:≈ code, so that an arbitrary line is not ashamed to be shown to Kernighan and Ritchie.
+ 	• I used to use over twenty programming languages—from assembling language to Java, from COBOL to perl and from Shell-script to .NET. I like Java for the elegance and LISP for brackets. I learned the ABC on DVK-2 with an operating system RT11SJ, the Russian analogue (in the same sense in which the VAZ-2101 is an analogue of Fiat) of VAX/VMS. At home I am using Linux. I hate Solaris for her memory alignment. I am loyally calm regarding Windows. My favorite activity is the development of new technologies (yielding skills, if say it less stilted.)
+ 	• I am an originator of the  first translation¹http://russian.joelonsoftware.com/uibook/chapters/1.html  of Spolsky's “Manual on UI design for programmers”. If I am not thinking about IT, I probably may be seen writing poems of average quality, or playing bridge with my friends.

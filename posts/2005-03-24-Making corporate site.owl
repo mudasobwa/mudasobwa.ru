@@ -1,0 +1,304 @@
+---
+title: 'Making corporate site'
+permalink: /post/show/977
+date: '2005-03-24 13:15:16'
+categories: [txt]
+---
+
+〉 Written by request of   Bradstreet Nord¹http://dnb.spb.ru 
+
+☇ h14055-1 §3 Site Needed
+
+☇ p14055-1 
+
+✿_p_auto One day we faced the necessity to make a site for our consulting company.
+
+☇ h14055-2 §4 Our Client
+
+☇ p14055-2 
+
+✿_p_auto We figured, well, we thought we figured, how the average client of our company looks like. She is a ≈vice-president≈ of ≈middle-size≈ business, nearly ≈30-year-old≈, wearing ≈black-tied-jeans≈ and just bought a Festina watch (already the Swiss one, but not a Tissot yet). She works 24x7, has masters in economics and lives in adorable medley of ≈just-out-of-colledge≈ delight and ≈wow-i-am-responsible-for-that≈ hazard. She is to computers like a duck to water, expecting the same from the chief and pinning the colleagues up about. ⏎
+She feels it's time to get on and she takes opportunities to do so. She digs all around to find a problem to solve and solves it occasionally. She is successful, pleased with herself and her life, slightly tired but not bored. ⏎
+And, yes, we are to sell our service over the internet.
+
+☇ h14055-3 §4 Site Is To Be
+
+☇ p14055-3 
+
+✿_p_auto  The moment we understood we are to build the site to sell our service more efficiently, we got clearly that we do not realize ≈how the hell≈ we are going to start. Needless to say, we had the common deceitful set of requirements to the site. It was to be:
+
+•  passing rich;
+•  distinguished from rivals' sites;
+•  making great impression;
+•  bringing in return.
+
+☇ p14055-4 
+
+✿_p_auto Soon we realized these are not ≈to be applied≈. All these above are just generic senseless void phrases, suitable to impress the CEOs but absolutely useless for both customers and potential clients. Stock phrases are good to be spoken on Monday meetings, especially when there is a forthcoming deadline and we are surely behind. And, finally, stock phrases always drive us bonkers.
+
+☇ h14055-4 §4 Let's do it now!
+
+☇ p14055-5 
+
+✿_p_auto That's why we calmed down the hotheads and deferred the site designing. We concentrated on the main task. We were to understand, what is ≈being awaited≈ from our site by our average client, portrayed above. A ≈what-the-hell-does-she-wants≈ question was commuted for these:
+
+•  how does it happen she is visiting our site?
+•  what does she expect to find on the main page?
+•  how to keep her surfing, to get her inside?
+•  how to impress her? does she love animated buttons, flash or plain text?
+•  does she save pages to browse offline? does she print content? 
+•  how educated is she in web surfing? does she use ≈mailing-list-like≈ features? does she know what and you? do you know?  RSS†and you? do you know? †  is for?
+•  this list is to be extended.
+
+☇ p14055-6 
+
+✿_p_auto And we started to gain information to assure ourselves we are to produce what is really needed, rather than what is fashionable today. We put answers to the questions on the board as they appeared, in random order. We were to cover all the holes—that's why the order was not so crucial. ⏎
+We named our average customer Jessica to ease the concordance of her predilections/biases and blandly called her Jess, ≈to win a tender≈.
+
+☇ h14055-5 §3 Answers To The Question
+
+☇ h14055-6 §4 Design Concepts
+
+ ⏎
+☇ h14055-7 §4 Coding Language?
+
+☇ p14055-7 
+
+✿_p_auto Now, in XXI century, the site is to appear in modern HTML standard, taken place of HTML 4.01 XHTML†modern HTML standard, taken place of HTML 4.01† . Therefore, each our file will have a header of a view: 
+
+✿_div_code 
+
+Λ
+<?xml version= "1.0"  encoding= "UTF-8" ?> <!DOCTYPE  html    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html  xmlns= "http://www.w3.org/1999/xhtml"  xml:lang= "en"  lang= "en" > 
+Λ
+
+☇ h14055-8 §4 To Flash Or Not To Flash?
+
+☇ p14055-8 
+
+✿_p_auto That was not even a question, but we still brainstormed it.  ⏎
+Jess has no sufficient spare time to revel in our creation. We are not going to make absolutely Spartan design, of course, but we can not waste visitors' time showing them chatoyant holograms. We will give links to the ≈best-of-art≈ sites at a pinch. Oh, Jess, hopefully you are not an ardent Flash disciple! ⏎
+Of course, there was no doubt to reject using animated buttons. That is not XIX century seen out, and we have already heard about.
+
+☇ h14055-9 §4 Navigation
+
+☇ p14055-9 
+
+✿_p_auto The weakest link all around is always the navigation. And we decided to put a lot of effort to improve it on our site dramatically.
+
+☇ h14055-10 §4 News on our site
+
+☇ p14055-10 
+
+✿_p_auto Yeap, we ≡must≡ support newsfeeds on our site. This is the only way to keep our visitors ≈up-to-date≈ with all our hotnews. This is the only way to turn Jess back to our site when we have new service/product released. This is the only way to give Jess a chance not to forget about us in a continuous round of business events.  ⏎
+There are actually two common ways to implement ≈up-to-date≈ news accordance. Mailing lists are commonly used and easy to get. They require almost no specific knowledge to start receiving site updates from Jess. There is one and only dirty trick in mailing lists concept. The emails look much like spam and (!) they are being treated like spam within one week or even earlier. Let's see. Jess was surfing the internet on Monday morning. She found great (hmmm.. it's ours so we are free to call it as we like) site. She decided she wants to stay notified in advance about the service updates and she finally filled in the form to subscribe to mailing list. ⏎
+Our site, to our pity, is not a joker blog, therefore we are not able to post news/announces twice a day. So, when the upcoming event was fired, to say, within a week, Jess got an email with some strange return address (e.g. ≈mailing-list≈@ourdomain.com) and vague content of ≈ad-like≈ view. She all of a sudden recalled, that she subscribed to this mailing list; she skimmed over the paragraphs and removed an email, somewhat annoyed.  ⏎
+Two weeks later (we still are not cranking the news out) Jess received another email from the totally forgotten sender. She made certain that the mail contains promotional content, got totally irritated and marked it as spam. She safely has a ≈spam-filter≈ installed on her computer. Got the point? Our newsletters are junked from now on directly to Jess' trashcan.  ⏎
+Voilá. ⏎
+Hopefully, there is another solution to grant Jess an ability to stay ≈up-to-date≈ with our news. It is stays for Really Simple Syndication or RDF Site Summary RSS†stays for Really Simple Syndication or RDF Site Summary† . It's not as widely spread over the internet as mailing lists, but it is really more targeted, giving a better feedback. RSS is a news feed, provided by the site in a special ≈XML-based≈ format. There are a lot of possibilities to read ≈RSS-feeds≈; all the ≈standard-compliant≈ browsers give an ability to read such news easily; there is also a lot of ≈RSS-Reader≈ software all around. The main advantage of this format is that ≡the user≡ is to initiate the news fetching—when she ≡wants≡ to read them, when she ≡really requires≡ them. The user feels she is somehow in control, she does not get ≈spam-like≈ messages, she just gained the currently required information on her demand. ⏎
+The only problem is that Jess likely has no clue about what RSS is. So, we should provide a brief explanation of what RSS is, supply an RSS feed and still leave ≈mailing-list≈ subscription for those who do not want to study new things. Not that we are really interested in such clients; but we probably still may be interested in their money.  ⏎
+Just in case, the screenshot below shows how Mozilla/Firefox gives a hint that there is an RSS feed supported by the site by displaying the icon in the ≈right-bottom≈ corner of main window. 
+
+✿_div_indent  http://img147.exs.cx/img147/8237/rssenabledicon9dy.png
+
+ ⏎
+☇ p14055-11 
+
+✿_p_auto The user may click it and append the feed in her bookmarks. There is really a lot of great detailed explanations of how RSS works over the internet, so we stop discussing it here.  ⏎
+The only obstacle left to be mentioned is that to force browsers to show this icon, the HTML head tag should appear on the page: 
+
+✿_div_code 
+
+Λ
+<link  rel= "alternate"                    type= "application/rss+xml"                    title= "Our company news"                   href= "http://ourdomain.com/rss"  /> 
+Λ
+
+ Here we go.☇ h14055-11  ⏎
+                  §4 Browser Navigation
+
+☇ p14055-12 
+
+✿_p_auto There are few people who know that the level navigation became a standard in 1999 and is supported by all the ≈standard-compliant≈ browsers:
+
+✿_div_indent  http://img138.exs.cx/img138/2926/navenabledsite6ut.png
+
+ ⏎
+☇ p14055-13 
+
+✿_p_auto It's to be used in HTML as shown below: 
+
+✿_div_code 
+
+Λ
+<link  rel= "start"                    title= "Homepage"                    href= "http://ourdomain.com/"  /> 
+Λ
+
+ The complete list of navigation items to be used is  provided by W3C¹http://www.w3.org/TR/html4/types.html#h-6.12 . ⏎
+Of course, Jess' browser may lack an ability to show the standard navigation links. That's why we'll definitely make all the information on the site available from the cover page with ordinary HTML links. But we probably will give Jess a hint of `how to navigate more efficiently'.  ⏎
+Furthermore, these λlinkλ references are very useful in cooperation with e.g. Google, Yahoo, Altavista etc. search engines†e.g. Google, Yahoo, Altavista etc.† . Each search engine analyses the contents of the λlinkλ metatags to show requested pages in proper language (tag λlink lang="..."λ), to show the front page of a collection of documents (tag λlink start="..."λ), to show the printed version of a manual (tag λlink media="print"λ).☇ h14055-12  ⏎
+§4 Tiny Jocundity
+
+☇ p14055-14 
+
+✿_p_auto Have you ever seen the small pretty icons in IE's favorites (own for every site)? Or, even more, if you are happy using Firefox, the icons appear in both address bar and tab caption. These are ≈so-called≈ favorite icons: 
+
+✿_div_code 
+
+Λ
+<link  rel= "shortcut icon"  href= "/favicon.ico" /> 
+Λ
+
+ ⏎
+Distinguish your site appearance, make it recognizable within a fleeting glance!☇ h14055-13  ⏎
+§4 Site Presentation
+
+☇ p14055-15 
+
+✿_p_auto Have you ever heard about the holy wars of type `the ≈A-tool≈ is better than the ≈B-tool≈'? If not, you obviously work in ≈not-IT-relative≈ business. `This ≈R-browser≈ is ≈quick-witted≈, while the ≈Q-navigator≈ is as sharp as a needle and the ≈T-one≈ is evidently the most stable'. The amount of opinions is not less than an amount of people around. ⏎
+That's why we may not make any assumptions about what browser on what operating system Jess runs. And we ≈even do not need to≈. The site should look impressive in every browser. ⏎
+The design regarding what browser/Operating System, e.g.: Windows, MacOS, Linux OS†Operating System, e.g.: Windows, MacOS, Linux†  combination is used depends on:
+
+•  ≡fonts≡—nobody knows, whether Jess has anything but preinstalled fonts;
+•  ≡screen resolution≡—Apple Macintosh computers use MacOS system to operate Macintosh†Apple Macintosh computers use MacOS system to operate†  users have huge monitors with great resolution, while Jess' secretary likely runs OS by Microsoft™, predecessor of Windows 2000 and Windows XP Win98†OS by Microsoft™, predecessor of Windows 2000 and Windows XP†  on The old-fashioned processor by Intel™, slow and ugly 586†The old-fashioned processor by Intel™, slow and ugly†  at it's last gasp. No need to mention printers have own resolution, that differs.
+•  ≡decoration elements≡—interpreted by different browsers ≈off-centre≈.
+
+☇ p14055-16 
+
+✿_p_auto The solutions are given below, as they are common and may be applied to every site:
+
+•  ≡fonts≡ are to be specified for each OS in stays for Cascading Style Sheet, please ask Google about CSS†stays for Cascading Style Sheet, please ask Google about†  accurately: 
+
+✿_div_code 
+
+Λ
+
+✿_div_hl-main  ✿_span_hl-codefont-family: ✿_span_hl-code  ✿_span_hl-identifierGeorgia✿_span_hl-identifier  ✿_span_hl-code, '✿_span_hl-code  ✿_span_hl-identifierURW Bookman L✿_span_hl-identifier  ✿_span_hl-code', '✿_span_hl-code  ✿_span_hl-identifierTimes New Roman✿_span_hl-identifier  ✿_span_hl-code', ✿_span_hl-code  ✿_span_hl-identifierTimes✿_span_hl-identifier  ✿_span_hl-code, ✿_span_hl-code  ✿_span_hl-identifierserif✿_span_hl-identifier  ✿_span_hl-code;✿_span_hl-code 
+
+Λ
+
+ Now, if Jess is on Macintosh, the site will appear in her preferred λserifλ font, namely in λ'Times New Roman'λ, since she has neither λGeorgiaλ (known to be ≈Windows-specific≈) nor λ'URW Bookman L'λ (≈Linux-specific≈). If she were on Windows, she would get λGeorgiaλ, as originally designed. The most common error over is to forget about other operating systems and specify the font as: 
+
+✿_div_code 
+
+Λ
+
+✿_div_hl-main  ✿_span_hl-codefont-family: ✿_span_hl-code  ✿_span_hl-identifierGeorgia✿_span_hl-identifier  ✿_span_hl-code, ✿_span_hl-code  ✿_span_hl-identifierTimes✿_span_hl-identifier  ✿_span_hl-code, ✿_span_hl-code  ✿_span_hl-identifierserif✿_span_hl-identifier  ✿_span_hl-code;✿_span_hl-code 
+
+Λ
+
+ It follows by appearance of default font on Linuces/MacOS, breaking the design.
+•  ≡resolution≡ plays no role in ≈competent≈ design. The font sizes ≡must≡ be specified in percents, rather than in rigid pixels:
+
+✿_div_code 
+
+Λ
+
+✿_div_hl-main  ✿_span_hl-codefont-size: 100%;✿_span_hl-code 
+
+Λ
+
+ Printers are to be handled more accurately—since CSS provides an ability to specify different stylesheets for different stays for designation of the device where the site appears for preview-printer,screen,tv or even voice generators medias†stays for designation of the device where the site appears for preview-printer,screen,tv or even voice generators† . The second line in the HTML fragment below shows how to affect another stylesheet for page printing: 
+
+✿_div_code 
+
+Λ
+<link  rel= "stylesheet"  type= "text/css"  href= "css/main.css"             title= "Main"  media= "screen" />      <link  rel= "stylesheet"  type= "text/css"  href= "css/print.css"             title= "Print"  media= "print" /> 
+Λ
+
+ This stylesheet is to remove all the vivid decorations, make text color ≈black-on-white≈ and hide the top menu: 
+
+✿_div_code 
+
+Λ
+
+✿_div_hl-main  ✿_span_hl-identifierdiv.menu ✿_span_hl-identifier  ✿_span_hl-brackets{ ✿_span_hl-brackets  ✿_span_hl-reservedvisibility: ✿_span_hl-reserved  ✿_span_hl-stringhidden✿_span_hl-string  ✿_span_hl-code; ✿_span_hl-code  ✿_span_hl-reserveddisplay: ✿_span_hl-reserved  ✿_span_hl-stringnone✿_span_hl-string  ✿_span_hl-code; ✿_span_hl-code  ✿_span_hl-brackets}  ✿_span_hl-brackets  ✿_span_hl-identifierbody ✿_span_hl-identifier  ✿_span_hl-brackets{ ✿_span_hl-brackets  ✿_span_hl-reservedcolor: ✿_span_hl-reserved  ✿_span_hl-varblack✿_span_hl-var  ✿_span_hl-code; ✿_span_hl-code  ✿_span_hl-reservedbackground-color: ✿_span_hl-reserved  ✿_span_hl-varwhite✿_span_hl-var  ✿_span_hl-code; ✿_span_hl-code  ✿_span_hl-brackets}✿_span_hl-brackets 
+
+Λ
+
+ That's it!
+•  ≡decoration elements≡ are surely needed to make the site looking fine. Nobody loves ≈call-up-papers-styled≈ austere ≈black-on-white≈ proclamations. But each fishy decoration element, suspected to be treated ≈off-center≈, must be supplied with standard patch. If the browser will reject to interpret shady code, it will turn back to patch, still showing the content properly (maybe not so vivid, but correct). For instance, Internet Explorer, web browser by Microsoft™, native for Windows operating systems IE†Internet Explorer, web browser by Microsoft™, native for Windows operating systems†  partially rejects usage of new, most up-to-date standard of CSS CSS2†new, most up-to-date standard of CSS†  and requires the following patch to be used: 
+
+✿_div_code 
+
+Λ
+
+✿_div_hl-main  ✿_span_hl-identifier#content✿_span_hl-identifier  ✿_span_hl-code > ✿_span_hl-code  ✿_span_hl-identifierdiv.decorated ✿_span_hl-identifier  ✿_span_hl-brackets{ ✿_span_hl-brackets  ✿_span_hl-reservedbackground: ✿_span_hl-reserved  ✿_span_hl-codeurl(img/✿_span_hl-code  ✿_span_hl-varbackground✿_span_hl-var  ✿_span_hl-code.jpg) 0✿_span_hl-code  ✿_span_hl-string% ✿_span_hl-string  ✿_span_hl-code100✿_span_hl-code  ✿_span_hl-string% no-repeat fixed✿_span_hl-string  ✿_span_hl-code; ✿_span_hl-code  ✿_span_hl-reservedbackground-color: ✿_span_hl-reserved  ✿_span_hl-var#FFFFFF✿_span_hl-var  ✿_span_hl-code;✿_span_hl-code  ✿_span_hl-brackets}✿_span_hl-brackets  ✿_span_hl-code /✿_span_hl-code  ✿_span_hl-identifier* BG will be shown on the bottom✿_span_hl-identifier  ✿_span_hl-code, ✿_span_hl-code  ✿_span_hl-identifierbut IE spits on the CSS2 *✿_span_hl-identifier  ✿_span_hl-code/✿_span_hl-code  ✿_span_hl-identifierdiv.decorated ✿_span_hl-identifier  ✿_span_hl-brackets{ ✿_span_hl-brackets  ✿_span_hl-reservedbackground-color: ✿_span_hl-reserved  ✿_span_hl-var#FFFFFF✿_span_hl-var  ✿_span_hl-code;✿_span_hl-code  ✿_span_hl-brackets}✿_span_hl-brackets  ✿_span_hl-code /✿_span_hl-code  ✿_span_hl-identifier* Hey✿_span_hl-identifier  ✿_span_hl-code, ✿_span_hl-code  ✿_span_hl-identifierIE✿_span_hl-identifier  ✿_span_hl-code, ✿_span_hl-code  ✿_span_hl-identifieryour time to eat your simple withered white BG *✿_span_hl-identifier  ✿_span_hl-code/✿_span_hl-code 
+
+Λ
+
+☇ h14055-14 §4 Spangles
+
+☇ p14055-17 
+
+✿_p_auto Let's embellish a little bit the site now with pretty ≈non-standard≈ but ≈safe-to-use≈ (in terms it never breaks the behavior or violates the CSS compliance) spangles. The most browsers will colorize scrollbars if the following CSS piece is presented: 
+
+✿_div_code 
+
+Λ
+
+✿_div_hl-main  ✿_span_hl-identifierBODY ✿_span_hl-identifier  ✿_span_hl-brackets{  ✿_span_hl-brackets  ✿_span_hl-reservedSCROLLBAR-FACE-COLOR: ✿_span_hl-reserved  ✿_span_hl-varmaroon✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-ARROW-COLOR: ✿_span_hl-reserved  ✿_span_hl-varyellow✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-TRACK-COLOR: ✿_span_hl-reserved  ✿_span_hl-varred✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-BASE-COLOR: ✿_span_hl-reserved  ✿_span_hl-varmaroon✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-SHADOW-COLOR: ✿_span_hl-reserved  ✿_span_hl-varblack✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-DARKSHADOW-COLOR: ✿_span_hl-reserved  ✿_span_hl-varblack✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-HIGHLIGHT-COLOR: ✿_span_hl-reserved  ✿_span_hl-varred✿_span_hl-var  ✿_span_hl-code;  ✿_span_hl-code  ✿_span_hl-reservedSCROLLBAR-3DLIGHT-COLOR: ✿_span_hl-reserved  ✿_span_hl-varyellow✿_span_hl-var  ✿_span_hl-code;✿_span_hl-code  ✿_span_hl-brackets}✿_span_hl-brackets 
+
+Λ
+
+ That's definitely not necessary but it makes a design looking exclusive. ⏎
+Ooh. Looks like it's time to finish with general things and turn back to the site itself.☇ h14055-15 §3 What Are We To Publish
+
+☇ p14055-18 
+
+✿_p_auto To say the truth, we do not have tons of information to publish. Services we provide, article of trade, general analytical information to share and breaking, hmmm, news twice a month. We quarrelled with our bread and butter and after ≈half-day≈ boxing decided not to put our photos on the site. Hopefully you see, how it was hard to compel ourselves; surely you understand how it was profitable for our site. ⏎
+Well, no scaring measures of data—no bloody pulldown menus. Wow. ⏎
+Single menu line (`about'—`services'—`products'—`for customers'—`news'... all the crap, you know) will be put somewhere on the top. Or, alternatively, at the bottom. Or even on the left. Never mind. ⏎
+Contact information on each page—we are to earn money immediately as Jess wants to pay—nevertheless which page Jess is currently visiting. We can not force her to try to find where to call or whom to ask. ⏎
+Some creative picture on the left (or on the right?—we'll then ask our designer about). ⏎
+And—the plain information. Because we want to give information, to sell information; the information is our service.
+
+☇ h14055-16 §4 A Glare Around
+
+☇ p14055-19 
+
+✿_p_auto How to decorate the site? Hey, Jess, what do you like? Pet photos or links to ≈five-year-old≈ documents, ≈plain-text≈ ≈black-tie≈ pages or ≈white-on-red≈ cursive font? How we will please you, for God's sake? ⏎
+Actually, the question has an answer. Really! We are to sell information and we'll put it on board. Twenty percents love colored pictures of ≈camel-hunting≈ safari, while eighty percents are still looking for the knowledge. And we'll make the text 20% brighter, than pure black and the pictures will appear on every fifth page. Just kidding. ⏎
+But we were not just kidding here. That's the point—we are to satisfy all the expectations. Virtually. ⏎
+If we were allowed to pick up a new logo, we would be really free in color chase, but that is not a case. We already had a logo and it is brand brown. Hence our site's color spectrum will be in brown cold colors with orange to shine and emphasize.  ⏎
+The background is white or, at least, ≈nearly-white≈, sorry for not mentioning this in the title. ⏎
+Our information is never contained of a lot of text; we show ≈breaking ideas≈ and want to make money on their conceptual development. Therefore we should think about how to shade the files in the flow. Blocks of ideas, filled with words `dramatically', `impressive' and `private expert'. ⏎
+And, now, we are really ready to l─a─unch.
+
+☇ h14055-17 §3 How To Publish
+
+☇ p14055-20 
+
+✿_p_auto Do we need a Content Management System CMS†Content Management System† ? Well, yes. Even if at the moment being we have three pages of interest, tomorrow we will definitely have ten. Let's forget about The links leading to non-existent pages broken links†The links leading to non-existent pages† , incomplete menus (since new page was added, but forgotten to be mentioned in menu), HTML stuff. Our secretary will fulfill the site with information, as it arises. CMS ≡must≡ be used. ⏎
+We have the only claim to CMS. It must be fully customizable, i.e it is to provide an ability to change the site look dramatically—via CSS. ⏎
+That's all. ⏎
+Nope. ⏎
+That is not. ⏎
+Let's think about more carefully. Who is to edit content? Who is to publish news? What is to be published? Likely we have answers and those are: our secretary, our secretary, documents prepared in ≈MS Word≈ proprietary format. What does it mean? It means we should provide an ≈easy-to-become-familiar-with≈ and ≈easy-to-use≈ way to publish ≈MS Word≈ documents as ≈HTML≈ pages.  ⏎
+Who said `≈save-as-html-menu-item≈'? Please, off with you. We're not kidding here, we are making a site. ⏎
+So, there are two ways to accomplish the task: either to study our secretary to type in ≈html-like-formatted≈ code, or to provide kinda ≈Word≈ press a button and Word will produce normal html for you macro†press a button and Word will produce normal html for you† . We probably don't need to ask our secretary about what she prefers, huh? ⏎
+Let's go on.
+
+•  Do we need a forum? Well, yes. Maybe not now, but the correct answer is `well, yes'. As soon as we have our frequenters on the site—we do need a forum.
+•  Do we need a feedback? Certainly, yes.
+•  ≈Test-it-now≈ feature for all the services we provide?—Yes.
+•  Buy now button?—Bet yourself.
+
+☇ p14055-21 
+
+✿_p_auto All the above means, we should think about ≈what≈ CMS we are to pick up. And we surely will.
+
+☇ h14055-18 §4 Making The Site
+
+☇ p14055-22 
+
+✿_p_auto There is nothing to say about. Install CMS, supply a design, test, enjoy.
+
+☇ h14055-19 §3 Conclusion
+
+☇ p14055-23 
+
+✿_p_auto `Hey', you are surely to ask, `why you damn decide to build ≡your≡ site not at the start of your ≈IT-business≈?'. ⏎
+The answer goes:
+
+Honestly, we were building not ≡our≡ site. We just built the site of ≡your competitor≡.  We put all our knowledge and effort to make it the best. We were so empatic to feel their needs that we became virtually being themselves. Doing so we were able to understand their requirements keenly, to concoct their average client, to conform to their expectation. ⏎
+And, if they are not satisfied with the result, we go to <a href="#start" title="Return to the beginning with yielded knowledge"/>.

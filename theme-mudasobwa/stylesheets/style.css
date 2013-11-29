@@ -1,0 +1,38 @@
+.container-narrow {
+  margin: 60px auto;
+  max-width: 750px;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+h3 span.date {
+  font-size: 40%;
+  color: #999;
+  top: -10px;
+  position: relative;
+}
+
+footer {
+  font-size: 75%;
+  margin-top: 60px;
+  text-align: center;
+}
+
+ul.pagination {
+  text-align: center;
+}
+
+div.post, div.posts {
+  margin: 20px auto;
+  border-bottom: 1px dotted rgba(235,104,100,0.3);
+}
+
+div.post img, div.posts img {
+  max-width: 700px;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar, .github-fork-ribbon {
+  font-family: 'Ubuntu Mono', 'Liberation Mono', 'Andale Mono', monospace;
+}

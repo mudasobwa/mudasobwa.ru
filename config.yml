@@ -1,0 +1,35 @@
+"theme-mudasobwa" :
+  "use" : "theme"
+
+_root:
+  summary_lines: 0
+  rss:
+    enable: false
+  paginator:
+    enable: false
+
+posts:
+  sort: ["date", "desc"]
+  permalink: "/:categories/:title/"
+  summary_lines: 0
+  latest: 10
+  rss:
+    enable: true
+    limit: 10
+    # The url to prepend to the rss.xml feed, e.g.: /posts/rss.xml
+    # Defaults to: "/<resource_name>/"
+    # Always start with a forward slash, as ruhoh will internally respect any base_path you set.
+    # url: "/posts/"
+  paginator:
+    enable: true
+    # The url your paginated pages will be located: e.g /posts/index/1, /posts/index/2, /posts/index/3
+    # Always start with a forward slash, as ruhoh will internally respect any base_path you set.
+    url: "/post/index/"
+    per_page: 10
+    borders: 5
+    # Set the custom page you want page#1 of your posts paginator to link to. (default: /posts/index/1)
+    # Note the default is technically <paginator.url>/1 just as the other paginated pages.
+    # It is up to you to display the paginator_pagination links somewhere in this case.
+    #
+    # root_page has been set to the root for a more traditional style blog feel.
+    root_page: '/'

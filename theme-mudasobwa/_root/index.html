@@ -1,0 +1,23 @@
+---
+title: Ipsissima Verba
+description: 'Алеша «Борисыч» Матюшкин. Рожден 0 октября 1973 года.'
+---
+
+{{# posts.paginator }}
+<div class="post">
+  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
+
+  {{{ summary }}}
+</div>
+{{/ posts.paginator }}
+
+<ul class="pagination">
+{{#posts.paginator_navigation}}
+  {{#is_active_page}}
+    <li class="active"><a href="{{url}}">{{name}}</a></li>
+  {{/is_active_page}}
+  {{^is_active_page}}
+    <li><a href="{{url}}">{{name}}</a></li>
+  {{/is_active_page}}
+{{/posts.paginator_navigation}}
+</ul>

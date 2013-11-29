@@ -1,0 +1,57 @@
+---
+title: 'Создание changelog’а для сертификации update’а'
+permalink: /post/show/3832
+date: '2010-08-20 14:47:35'
+categories: [txt]
+---
+
+§3 Процедура создания diff'а между двумя параллельными ветками дистрибутива (с нашими изменениями)
+
+Процедура создания diff'а для всех четырех дистрибутивов примерно одинакова. Подготавливается чистая виртуальная машина, куда устанавливается ≡старая≡ версия дистрибутива. Регистрируемся в RHN. Затем производится некоторая подготовка к работе:
+
+Λ
+yum install -y yum-downloadonly yum-changelogmkdir -p /Release/new-packagesyum update -y --downloadonly --downloaddir=/Release/new-packages --changelog > /Release/updates.log
+Λ
+
+Если все закончится успешно, а оно, блин, обязано закончится успешно, потому что пока мы имеем дело с редхатовскими пакетами, — в каталоге λ/Releaseλ мы найдем текстовый файл и кучу пакетов в /Release/new-packages. TODO: Текстовый файл надо бы распарсить автоматически, но руки пока не дошли. Нужно его поделить на два:
+
+• выкинуть преамбулу до changeloga и список файлов после него, чистый changelog — записать в файл changelog-updates.txt
+• список файлов — записать в changelog-files.txt
+
+Теперь основная процедура — сборка наших RPM'ов из SRPM'ов. (Предполагается, что архив с ними уже здесь, с подкаталогами SPECS и SOURCES и∕или SRPMS.)
+
+Λ
+yum install rpm-build
+Λ
+
+≡Важно!≡ Если это десктопный дистрибутив — необходимо сначала подключить канал «Workstation»!
+
+Λ
+mkdir -p /usr/src/redhat/ && cd /usr/src/redhat/ && tar xf /tmp/SRPMS.tarfor i in `ls SPECS`; do rpm-build -ba $i ; done
+Λ
+
+Нас в процессе попросят установить несколько пакетов λ-develλ — устанавливаем, они не помешают процессу (а помогут — весьма).
+
+Λ
+cd /usr/src/redhat/RPMSyum localinstall * -y --downloadonly --downloaddir=/Release/new-packages --changelog > /Release/our-updates.log
+Λ
+
+Так. RPM-ы готовы. Относим их в λ/Release/new-packagesλ, удаляем оттуда их старые варианты. TODO: Надо бы автоматизировать, ага. С файлом λour-updates.logλ обходимся так же, как раньше с λupdates.logλ
+
+Мы подготовили плацдарм для создания отчета (и уже сделали архив измененных RPM-ов). Несем папку λ/Releaseλ на машину помощнее, внутри создаем папку λiold-packagesλ, куда распаковываем RPM-ы из старого дистрибутива (из которого мы в начале устанавливали систему). Запускаем скрипт  runProcessChangelogs.sh¹http://www.assembla.com/code/yummertime/subversion/nodes/runProcessChangelogs.sh  (в нем ничего интересного нет) — и идем пить кофе с булочками. TODO: нужно передавать архитектуру и версию как параметры, сейчас они вмурованы в код. Когда он отработает, у нас появится симпатичный файл, который можно скармливать скрипту  runConvert.sh¹http://www.assembla.com/code/yummertime/subversion/nodes/runConvert.sh 
+
+≡NB!≡ Для успешной работы этого скрипта — рядом должны лежать питоновские файлы и шаблон для Excel'я, а на компьютере должны быть установлены пейтон не ниже 2.6, опенофис и pyuno bindings между ними. Скрипт пойдет в гугл за переводами и отформатирует шит в экселе сам. Там есть два интересных куска, приведу тут.
+
+Λ
+# function to translate text using google APIbaseUrl = "http://ajax.googleapis.com/ajax/services/language/translate"def translate(text,src='en', to='ru'):        '''        A Python Wrapper for Google AJAX Language API:        * Uses Google Language Detection, in cases source language is not provided with the source text        * Splits up text if it's longer then 4500 characters, as a limit put up by the API        '''        params = ({'langpair': '%s|%s' % (src, to), 'v': '1.0' })        retText=''        for text in getSplits(text):                params['q'] = text                resp = simplejson.load(urllib.urlopen(                                       '%s' % (baseUrl),                                        data = urllib.urlencode(params)))                try:                        retText += resp['responseData']['translatedText']                except:                        raise        # retText = re.sub("постановляет", "Исправлена ошибка", retText, flags=re.UNICODE)        retText = re.sub("- ", "-- ", retText)        return retText
+Λ
+
+Λ
+"""connection to ooCalc; DON'T FORGET to have oocalc already started with $ oocalc "-accept=socket,host=localhost,port=8100;urp;""""        def __init__(self, port=DEFAULT_OPENOFFICE_PORT):                localContext = uno.getComponentContext()                resolver = localContext.ServiceManager.createInstanceWithContext(                              "com.sun.star.bridge.UnoUrlResolver", localContext)                try:                        context = resolver.resolve(                              "uno:socket,host=localhost,port=%s;urp;StarOffice.ComponentContext" % port)                except NoConnectException:                        raise DocumentConversionException,                               "failed to connect to OpenOffice.org on port %s" % port                self.desktop = context.ServiceManager.createInstanceWithContext(                              "com.sun.star.frame.Desktop", context)
+Λ
+
+Остались сущие пустяки: нужно добавить к CVE-уязвимостям их описание из Bugzilla. Скрипт  embedCVEs.sh¹http://www.assembla.com/code/yummertime/subversion/nodes/embedCVEs.sh?rev=4  сделает это.
+
+Осталось собрать пакеты (пока нам нужны некритичные обновления) — и файл с их описанием.
+
+Вот, собственно, и все. Пакуйте ─чемоданы─ результат и идите пить «Боржоми».
