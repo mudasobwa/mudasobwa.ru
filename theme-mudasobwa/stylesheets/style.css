@@ -68,7 +68,6 @@ p.epigraph {
   float: right;
   padding: 0.4em 0.8em 0.4em 1.4em;
 }
-
-p.afterepigraph {
+p.epigraph:after, p.afterepigraph {
   clear: both;
 }
