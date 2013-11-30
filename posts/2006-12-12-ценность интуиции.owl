@@ -16,5 +16,24 @@ categories: [txt]
 Зато изящность решения — лично меня — впечатлила:
 
 Λ
-  <xar:if  condition= "xarModIsAvailable('dynamicdata')" >      <div  class= "author_more" >        <h3  class= "xar-mod-title" > Все статьи автора: </h3>        <ul>          <xar:set  name= "$articles" > #xarModAPIFunc('articles','user','getall',              array('extra'=>array('dynamicdata')))# </xar:set>          <xar:foreach  in= "$articles"  value= "$article" >            <xar:set  name= "curr_author" > #xarModAPIFunc('dynamicdata','user','getitem',              array('itemtype'=>$ptid,'itemid'=>$article[['aid'],'fieldlist'=>'str_author'))# </xar:set>            <xar:if  condition= "$str_author eq $curr_author[['str_author']" >              <xar:if  condition= "$aid eq $article[['aid']" >                <li> #$article[['title']# </li>                <xar:else/>                <li><a  href= "&baseurl;#$article[['aid']#" > #$article[['title']# </a></li>              </xar:if>            </xar:if>          </xar:foreach>        </ul>      </div>   </xar:if> 
+  <xar:if  condition= "xarModIsAvailable('dynamicdata')" >
+    <div  class= "author_more" >
+      <h3  class= "xar-mod-title" > Все статьи автора: </h3>
+      <ul>
+        <xar:set  name="$articles" >#xarModAPIFunc('articles','user','getall',
+                  array('extra'=>array('dynamicdata')))# </xar:set>
+        <xar:foreach  in= "$articles"  value= "$article" >
+          <xar:set  name= "curr_author" > #xarModAPIFunc('dynamicdata','user','getitem',
+                    array('itemtype'=>$ptid,'itemid'=>$article[['aid'],'fieldlist'=>'str_author'))# </xar:set>
+          <xar:if  condition= "$str_author eq $curr_author[['str_author']" >
+            <xar:if  condition= "$aid eq $article[['aid']" >
+              <li> #$article[['title']# </li>
+            <xar:else/>
+              <li><a  href= "&baseurl;#$article[['aid']#" > #$article[['title']# </a></li>
+            </xar:if>
+          </xar:if>
+        </xar:foreach>
+      </ul>
+    </div>
+  </xar:if>
 Λ
