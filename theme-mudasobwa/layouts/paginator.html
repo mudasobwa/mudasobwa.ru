@@ -6,10 +6,14 @@ layout : default
   <div class="span12">
     {{#collection.paginator}}
       <div class="{{ collection.resource_name}}">
+      {{#summary_present}}
         <h3 class="title"><a href="{{url}}">{{  title  }}</a> <span class="date">{{ date }}</span></h3>
 
-        {{{ summary }}}
-
+        {{{ utf_summary }}}
+      {{/summary_present}}
+      {{^summary_present}}
+        <h3 class="schild">{{ title }}</h3>
+      {{/summary_present}}
       </div>
     {{/collection.paginator}}
 

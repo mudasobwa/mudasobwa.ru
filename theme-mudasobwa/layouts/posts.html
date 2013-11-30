@@ -8,9 +8,7 @@ layout : default
 {{/ page.author?to_data }}
 -->
 
-<div class="page-header">
-  <h1>{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
-</div>
+<h1 class="schild">{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
 
 <div class="row-fluid post-full">
   <div class="span12">
@@ -31,6 +29,7 @@ layout : default
       </ul>
     {{/ page.tags }}
 
+    <hr>
     <ul class="pager">
       {{# page.previous }}
         <li class="previous"><a href="{{ url }}" title="{{ title }}">&larr; Previous</a></li>
