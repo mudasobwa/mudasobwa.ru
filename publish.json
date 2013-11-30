@@ -1,7 +1,5 @@
 {
     "rsync" : {
-        "user" : "rocketscie",
-        "host" : "mudasobwa.ru",
-        "destination" : "/home/r/rocketscie/mudasobwa/public_html"
+        "command" : "rsync compiled/. -avz --delete --exclude-from rsync-excluded.txt rocketscie@mudasobwa.ru:/home/r/rocketscie/mudasobwa/public_html"
     }
 }

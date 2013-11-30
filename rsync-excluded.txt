@@ -1,0 +1,16 @@
+.svn
+.git
+awstats
+i
+private
+txt
+.htaccess
+robots.txt
+favicon.png
+favicon.ico
+yandex_5986785e934a92c8.txt
+yandex_5009324ca08778d6.txt
+googleed9c449fa9b15064.html
+BingSiteAuth.xml
+ii.html
+

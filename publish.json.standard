@@ -1,0 +1,7 @@
+{
+    "rsync" : {
+        "user" : "rocketscie",
+        "host" : "mudasobwa.ru",
+        "destination" : "/home/r/rocketscie/mudasobwa/public_html"
+    }
+}
