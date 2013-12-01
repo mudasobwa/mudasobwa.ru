@@ -3,7 +3,7 @@
 awstats
 i
 private
-txt
+theme-mudasobwa/fonts
 .htaccess
 robots.txt
 favicon.png
