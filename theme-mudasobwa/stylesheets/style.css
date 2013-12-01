@@ -7,6 +7,10 @@
   margin-top: 0;
 }
 
+.container>.navbar-header {
+  margin-right: 80px;
+}
+
 h3 span.date {
   font-size: 40%;
   color: #999;
@@ -36,6 +40,51 @@ div.post img, div.posts img {
 h1, h2, h3, h4, h5, h6, .navbar, .github-fork-ribbon {
   font-family: 'Ubuntu Mono', 'Liberation Mono', 'Andale Mono', monospace;
 }
+
+/* ========================================================================= */
+/* tag_box */
+.tag_box {
+  list-style:none;
+  margin:0;
+  padding: 0;
+  overflow:hidden;
+  font-size: 80%;
+  font-family: 'Ubuntu Mono', 'Liberation Mono', 'Andale Mono', monospace;
+}
+.tag_box li {
+  line-height:28px;
+}
+.tag_box li i {
+  opacity:0.9;
+}
+.tag_box.inline li {
+  float:left;
+}
+.tag_box a {
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  color:#555;
+  border-radius: 3px;
+  text-decoration:none;
+  border:1px dashed #ccc;
+}
+.tag_box a span{
+  vertical-align:super;
+  font-size:0.8em;
+}
+.tag_box a:hover {
+  background-color:#e5e5e5;
+}
+.tag_box a.active {
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
+}
+li.li-glyphicon {
+  margin-top: 6px;
+}
+/* ========================================================================= */
 
 .schild {
   display: inline-block;
@@ -70,4 +119,17 @@ p.epigraph {
 }
 p.epigraph:after, p.afterepigraph {
   clear: both;
+}
+
+.content ul.fancy {
+    padding-left: 2em;
+    list-style: none;
+    text-indent: -2em;
+}
+.content ul.fancy > li:before { 
+    content: "⁘";
+    color: rgba(235,104,100,0.8);
+    left: -0.2em;
+    top: 0.1em;
+    position: relative;
 }

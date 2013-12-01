@@ -21,13 +21,14 @@ layout : default
       {{> categories_list }}
     {{/ page.categories }}
     </ul-->
-    {{# page.tags }}
-      <hr>
-      <ul class="tag_box inline">
-        <li><span class="glyphicon glyphicon-tags"></span></li>
+    <hr>
+    <ul class="tag_box inline" style="float: right;">
+      <li class="li-glyphicon"><span class="glyphicon glyphicon-tags"> </span></li>
+      {{# page.tags }}
         {{> tags_list }}
-      </ul>
-    {{/ page.tags }}
+      {{/ page.tags }}
+    </ul>
+    <br><br>
 
     <hr>
     <ul class="pager">
