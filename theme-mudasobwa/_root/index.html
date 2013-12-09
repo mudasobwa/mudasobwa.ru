@@ -5,9 +5,14 @@ description: 'Алеша «Борисыч» Матюшкин. Рожден 0 о�
 
 {{# posts.paginator }}
 <div class="post">
-  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
+  {{#summary_present}}
+    <h3 class="title"><a href="{{url}}">{{  title  }}</a> <span class="date">{{ date }}</span></h3>
 
-  {{{ summary }}}
+    {{{ utf_summary }}}
+  {{/summary_present}}
+  {{^summary_present}}
+    <h3 class="schild">{{ title }}</h3>
+  {{/summary_present}}
 </div>
 {{/ posts.paginator }}
 

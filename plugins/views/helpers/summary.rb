@@ -10,7 +10,7 @@ module PageSummaryViewAddons
 
     # Return a summary element if specified
     summary_el = content_doc.at_css('.summary')
-    return summary_el.to_html unless summary_el.nil?
+    return summary_el.to_html(:encoding => 'UTF-8') unless summary_el.nil?
 
     # Get the configuration parameters
     # Default to the parameters provided in the page itself
