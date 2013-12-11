@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
 gem 'ruhoh', "~> 2"
-gem 'qipowl', :path => '../..'
+gem 'qipowl', "~> 0.4"
