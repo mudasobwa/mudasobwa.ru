@@ -52,7 +52,7 @@ module Ruhoh::Resources::Pages
       output = %Q(---
 title: '#{title}'
 date:  '#{Time.now.strftime('%Y-%m-%d %H:%M:%S')}'
-description '#{title}'
+description: '#{title}'
 collections: []
 tags:
   - jic
