@@ -11,6 +11,7 @@ _root:
 posts:
   sort: ["date", "desc"]
   permalink: "/:categories/:title/"
+  ext: ".owl"
   summary_lines: 0
   latest: 10
   rss:
