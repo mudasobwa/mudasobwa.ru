@@ -33,7 +33,7 @@ figure, figcaption {
   box-shadow: 3px 3px 5px rgba(50, 50, 50, .5);
 }
 figure {
-  display: table;  border-bottom: none;
+  display: table;  border-bottom: none; margin-bottom: 1.6em;
 }
 figcaption {
   display: table-caption; caption-side: bottom; border-top: none; padding-top: 0;
@@ -68,6 +68,9 @@ h1, h2, h3, h4, h5, h6, .navbar, .github-fork-ribbon {
   font-family: 'Ubuntu Mono', 'Liberation Mono', 'Andale Mono', monospace;
 }
 
+blockquote p {
+  font-size: 16px;
+}
 /* ========================================================================= */
 /* tag_box */
 .tag_box {
