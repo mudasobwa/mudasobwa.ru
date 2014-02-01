@@ -53,7 +53,7 @@ module Ruhoh::Resources::Pages
 title: '#{title}'
 date:  '#{Time.now.strftime('%Y-%m-%d %H:%M:%S')}'
 description: '#{title}'
-collections: []
+categories: []
 tags:
   - jic
 ---
