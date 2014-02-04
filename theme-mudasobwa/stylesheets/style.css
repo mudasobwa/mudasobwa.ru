@@ -65,7 +65,7 @@ div.post img, div.posts img {
 }
 
 h1, h2, h3, h4, h5, h6, .navbar, .github-fork-ribbon {
-  font-family: 'Ubuntu Mono', 'Liberation Mono', 'Andale Mono', monospace;
+  font-family: 'monofur', 'Droid Sans Mono', 'Liberation Mono', 'Andale Mono', monospace;
 }
 
 blockquote p {
