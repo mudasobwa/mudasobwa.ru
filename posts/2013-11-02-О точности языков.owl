@@ -24,7 +24,7 @@ tags:
 далеко за примером: вчера потребовалось выполнить ≈разные≈ действия в зависимости от того, с чего
 начинается строка. Нормальный человек не решает эту задачу перебором:
 
-Λ ruby
+Λ
   if str.start_with? 'a'
     puts 'String starts with “a”'
   elsif str.start_with? 'b'
@@ -40,7 +40,7 @@ tags:
 
 Поэтому мой вариант решения этой задачи оказался вот таким:
 
-Λ ruby
+Λ
   _start_with = lambda { |sample, string| string.start_with? sample }
   case string
   when _start_with.curry['a'] then puts 'String starts with “a”'
