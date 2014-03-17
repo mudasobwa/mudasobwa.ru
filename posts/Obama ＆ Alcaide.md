@@ -9,11 +9,11 @@ tags:
 
 Кабак…
 
-http://mudasobwa.ru/i/obama.jpg Obama — British Africa — Пиво-Джин-Ром-Кафе (сокр.: Пид’рок)
+![Obama — British Africa — Пиво-Джин-Ром-Кафе (сокр.: Пид’рок)](http://mudasobwa.ru/i/obama.jpg)
 
 …и парикмахерская
 
-http://mudasobwa.ru/i/alcaide.jpg iSabel Alcaide — Перукарня
+![iSabel Alcaide — Перукарня](http://mudasobwa.ru/i/alcaide.jpg)
 
 Общее название этих двух картинок может быть таким: «Изабель проболжает стричь
 пьяного афробрита».
