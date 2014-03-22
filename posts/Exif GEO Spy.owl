@@ -1,0 +1,19 @@
+---
+title: 'Exif GEO Spy'
+date:  '2014-03-22 12:05:37'
+description: 'Exif GEO Spy'
+categories: [txt]
+tags:
+  - jobby
+---
+
+Набросал расширение для Chrome, которое на открытой странице отыскивает
+фотографии с прописанными GEO-тегами в EXIF (метаданных JPEG-файлов),
+рисует вокруг них рамку выбранным вами цветом и добавляет в контекстное меню
+пункт «Показать карту».
+
+Установить в Chrome/Chromium: из Chrome Web Store¹https://chrome.google.com/webstore/detail/exif-spy/gjkofedjhdkomnlmhjfpbokihndpbook.
+
+Посмотреть на работу можно тут¹http://meme-me.ru/bcn/#2d6936d2adac03b96d5a05c1b9e54373-600.
+Правой кнопкой мышки щелкнуть по фотографии бывшей арены для боя быков и выбрать
+из меню «Показать карту».
