@@ -33,8 +33,8 @@ module Ruhoh::Resources::Pages
 
         name = "#{name}-#{@iterator}" unless @iterator.zero?
         filename = opts[:draft] ?
-          File.join(@ruhoh.paths.base, @collection.resource_name, "drafts", "#{name}#{ext}") :
-          File.join(@ruhoh.paths.base, @collection.resource_name, "#{name}#{ext}")
+          File.join(File.dirname(__FILE__), '..', @collection.resource_name, "drafts", "#{name}#{ext}") :
+          File.join(File.dirname(__FILE__), '..', @collection.resource_name, "#{name}#{ext}")
         @iterator += 1
       end while File.exist?(filename)
       [filename, file.gsub(/.*?\//, '')]
