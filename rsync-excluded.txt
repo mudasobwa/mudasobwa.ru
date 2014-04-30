@@ -4,6 +4,7 @@ awstats
 i
 private
 theme-mudasobwa/fonts
+assets/fonts
 .htaccess
 robots.txt
 favicon.png
