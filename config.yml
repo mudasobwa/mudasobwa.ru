@@ -44,3 +44,6 @@ widgets :
     use : yandex
     tracking_id : 1798399
 
+  comments :
+    use : disqus
+    short_name : mudasobwa
