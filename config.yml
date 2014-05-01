@@ -8,6 +8,9 @@ _root:
   paginator:
     enable: false
 
+assets:
+  use: "ignore"
+
 posts:
   sort: ["date", "desc"]
   permalink: "/:categories/:title/"
