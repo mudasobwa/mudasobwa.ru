@@ -39,7 +39,7 @@ figcaption {
   display: table-caption; caption-side: bottom; border-top: none; padding-top: 0;
 }
 figcaption p {
-  margin: 0;
+  margin: 0; font: 80% sans-serif; color: #aaa;
 }
 
 p.drop-cap:first-letter {
@@ -79,6 +79,7 @@ blockquote p {
   padding: 0;
   overflow:hidden;
   font-size: 80%;
+  color: #aaa;
   font-family: 'Ubuntu Mono', 'Liberation Mono', 'Andale Mono', monospace;
 }
 .tag_box li {
