@@ -39,7 +39,7 @@ figcaption {
   display: table-caption; caption-side: bottom; border-top: none; padding-top: 0;
 }
 figcaption p {
-  margin: 0; font: 80% sans-serif; color: #aaa;
+  margin: 0; font: 86% sans-serif; color: #aaa;
 }
 
 p.drop-cap:first-letter {
