@@ -1,8 +1,11 @@
 #!/usr/bin/env ruby
 
+require 'date'
+
 counter = 0
 curr = 0
-`rm -rf results/*`
+DIR = '../../mudasobwa-eblo/p'
+`rm -rf #{DIR}/*`
 
 Dir['*'].each { |f|
   next unless '.owl' == File.extname(f)
@@ -16,7 +19,7 @@ Dir['*'].each { |f|
   re_text = /---.*?---(.*)/m
 
   date = (s =~ re_date) ? $1 : "#{counter+=1}"
-  date = "#{date}-00-00-00" if date.length == 10
+  fname = "#{DIR}/" + Date.parse(date).to_s + '-1'
 
   # debug
   # next unless date =~ /2013-11-02-10-53-18/
@@ -27,6 +30,7 @@ Dir['*'].each { |f|
   text.gsub!(/^[〉>](.*?‒\s+.*?,\s+\S*)/mx) { |_|
     $1.strip
       .gsub(/^/mx, '    ')
+      .gsub(/‒\s+livejournal.com,\s+(http:\/\/(\w+).livejournal.com\/\d+.html)/, '✍ ✎ \2 :: ★ (\1)')
       .gsub(/‒\s+(.*?),\s+(.*)/mx, '    ✍ \1, \2')
   }
   # quotations
@@ -55,9 +59,9 @@ Dir['*'].each { |f|
   # cleanup
   text.gsub! /http:\/\/img-css.friends.yandex.net\/favicon.ico\s+(\S+)\s+\(\S+\)/, '✎ya \1'
 
-  fname = "results/#{date.gsub /[ :]/, '-'}"
-  fname.gsub!(/(..)$/) {|m|
-    sprintf "%02d", Integer(m.gsub /^0/, '') + 1
+  fname.gsub! /\-0/, '-'
+  fname.gsub!(/(\d+)$/) {|m|
+    Integer(m) + 1
   } while File.exist? fname
 
   File.write(fname, "#{text}")
